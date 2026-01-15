@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const taskInput = document.getElementById("taskInput");
   const addTaskButton = document.getElementById("addTaskButton");
+  const taskListContainer = document.getElementById("taskList")
   const STORAGE_KEY = "todoTasks";
 
   function saveTasks() {
@@ -76,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   addTaskButton.addEventListener("click", addTask)
-  
+
   taskInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
       addTask();
