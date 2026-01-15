@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const tasks = JSON.parse(storedTasks);
 
       tasks.forEach(function (task) {
-        console.log(task);
+        createTaskElement(task.text, task.completed)
       });
     }
   }
